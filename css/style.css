@@ -1,0 +1,82 @@
+body {
+	background-color: lightblue;
+	font-family: Roboto, sans-serif;
+}
+
+#title {
+	font-family: 'Pacifico', cursive;
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+div#main.container {
+	margin: auto;
+	max-width: 400px;
+	margin-top: 50px;
+
+}
+
+ul.nav-justified > li {
+	border: 1px solid black;
+	border-top-left-radius: 7%;
+	border-top-right-radius: 7%;
+	border-bottom: none;
+}
+
+ul.nav-justified > li > a {
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    background-color: darkblue;
+}
+
+ul.list-group {
+	border: 1px solid darkblue;
+}
+
+li.list-group-item {
+	list-style-type: none;
+	display: block;
+	position: relative;
+}
+
+img.logo {
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	border-radius: 5%;
+	border: 1px solid darkblue;
+}
+
+span.user-name {
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	left: 100px;
+	top: 32px;
+}
+
+span.glyphicon {
+	position: absolute;
+	font-size: 2em;
+	right: 25px;
+	top: 35px;
+}
+
+span.glyphicon-ok {
+	color: green;
+}
+
+span.glyphicon-remove {
+	color: red;
+}
+
+p.status {
+	font-style: italic;
+	font-size: 12px;
+}
+
+a:link {
+	text-decoration: none;
+}
