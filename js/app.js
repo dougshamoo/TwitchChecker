@@ -15,6 +15,7 @@
 
   app.controller('ListController', ['$http', function($http) {
   	var list = this;
+    list.searchTerm = "";
   	list.allUsers = [];
   	list.onlineUsers = [];
   	list.offlineUsers = [];
@@ -51,9 +52,8 @@
   
   }]);
 
-  var userNames = ["beyondthesummit", "freecodecamp", "storbeck",
-  "terakilobyte","purgegamers", "JoshOG", "SCGLive", "gamestarstv",
-  "Starladder1", "Starladder5", "justin", "syndicate"];
+  var userNames = ["BeyondTheSummit", "FreeCodeCamp",
+  "terakilobyte","purgegamers", "JoshOG", "Starladder1", "MedryBW"];
 
   var url = 'https://api.twitch.tv/kraken/streams/';
   var cb = '?callback=JSON_CALLBACK';

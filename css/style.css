@@ -8,12 +8,13 @@ body {
 	font-size: 40px;
 	text-align: center;
 	color: black;
+	padding-top: 10px;
 }
 
 div#main.container {
 	margin: auto;
 	max-width: 400px;
-	margin-top: 50px;
+	margin-top: 40px;
 
 }
 
@@ -26,9 +27,24 @@ ul.nav-justified > li {
 
 ul.nav-justified > li > a {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22px;
     color: white;
     background-color: darkblue;
+}
+
+
+div#search-bar {
+	margin-bottom:0;
+	padding: 15px 15px;
+	border: 1px solid black;
+	border-top: none;
+	border-bottom: none;
+	background-color: white;
+}
+
+div#search-bar > i.glyphicon {
+	right: 15px;
+	top: 15px;
 }
 
 ul.list-group {
@@ -39,6 +55,7 @@ li.list-group-item {
 	list-style-type: none;
 	display: block;
 	position: relative;
+	padding-bottom: 0;
 }
 
 img.logo {

@@ -25,12 +25,20 @@
   		  </li>
   		</ul>
   	</div>
-    
+
+    <!-- Search Bar and User Lists -->
     <div ng-controller="ListController as list">
 
+    <!-- Seach bar -->
+      <div id="search-bar" class="form-group has-feedback">
+        <input class="form-control" ng-model="list.searchTerm" placeholder="Search">
+        <i class="glyphicon glyphicon-search form-control-feedback"></i>
+      </div>
+
+      <!-- User lists depending on tab selection: All, Online, Offline and filered by search term -->
     	<div id="all-list" ng-show="tab.isSelected(1)">
     	  <ul class="list-group">
-    	    <li class="list-group-item" ng-repeat="user in list.allUsers">
+    	    <li class="list-group-item" ng-repeat="user in list.allUsers | filter: list.searchTerm">
     	      <a href="http://www.twitch.tv/{{user.name}}" target="_blank">
               <p>
                 <img class="logo" ng-src="{{user.logo}}">
@@ -46,7 +54,7 @@
 
     	<div id="online-list" ng-show="tab.isSelected(2)">
     	  <ul class="list-group">
-    	    <li class="list-group-item" ng-repeat="user in list.onlineUsers">
+    	    <li class="list-group-item" ng-repeat="user in list.onlineUsers | filter: list.searchTerm">
     	      <a href="http://www.twitch.tv/{{user.name}}" target="_blank">
               <p>            
                 <img class="logo" ng-src="{{user.logo}}">
@@ -61,7 +69,7 @@
 
     	<div id="offline-list" ng-show="tab.isSelected(3)">
     	  <ul class="list-group">
-    	    <li class="list-group-item" ng-repeat="user in list.offlineUsers">
+    	    <li class="list-group-item" ng-repeat="user in list.offlineUsers | filter: list.searchTerm">
     	      <a href="http://www.twitch.tv/{{user.name}}" target="_blank">
               <p>            
                 <img class="logo" ng-src="{{user.logo}}">
